@@ -27,11 +27,15 @@ ol {
   padding: 0;
 }
 
+img {
+  display: block;
+}
+
 .container {
-  width: 1230px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  align-items: center;
+  margin: 0 auto;
 }
 
 a {
@@ -42,7 +46,7 @@ a {
 }
 
 .header-frame {
-  border: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 }
 
 .header-flex {
@@ -60,21 +64,21 @@ a {
 }
 
 .logo {
-  margin-right: 93px;
+  color: var(--accent-color);
+
   font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none;
-  color: var(--accent-color);
 }
 
-.logo-accent {
+.logo-header {
+  margin-right: 93px;
+}
+
+.logo-accent-header {
   color: var(--text-color);
-}
-
-.logo-accent-footer {
-  color: var(--white-text);
 }
 
 .navigation {
@@ -85,18 +89,17 @@ a {
   margin-right: 50px;
 }
 
-.navigation .item {
+.navigation a {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-}
 
-.navigation a {
+  color: var(--text-color);
+
+  text-decoration: none;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
-  text-decoration: none;
-  color: var(--text-color);
 }
 
 .navigation a:hover,
@@ -118,12 +121,13 @@ a {
 }
 
 .contacts a {
+  color: var(--main-color);
+
+  text-decoration: none;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  text-decoration: none;
-  color: var(--main-color);
 }
 
 .contacts a:hover,
@@ -133,32 +137,42 @@ a {
 
 /*страница студии*/
 h1 {
+  margin-bottom: 30px;
+
+  color: var(--white-text);
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.37;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-
-  color: var(--white-text);
-
-  margin-bottom: 30px;
 }
 
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+
   background-color: var(--background-color);
+
   text-align: center;
 }
 
+.hero-header {
+  width: 696px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .hero-btn {
+  color: var(--white-text);
+  background-color: #2196f3;
+
   font-family: var(--main-font);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
   letter-spacing: 0.06em;
   cursor: pointer;
-
-  color: var(--white-text);
-  background-color: #2196f3;
 }
 
 .hero-btn:hover,
@@ -166,20 +180,16 @@ h1 {
   background-color: #188ce8;
 }
 
-h2 {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  text-decoration: none;
-
-  color: var(--text-color);
-  margin-bottom: 50px;
+.hidden-header {
+  visibility: hidden;
 }
 
 .features-list {
   display: flex;
-  justify-content: space-between;
+}
+
+.features-list .features-li + .features-li {
+  margin-left: 30px;
 }
 
 .features {
@@ -194,43 +204,70 @@ h2 {
 }
 
 .features-heder {
+  margin-bottom: 10px;
+
+  color: var(--text-color);
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-decoration: none;
   text-transform: uppercase;
-
-  color: var(--text-color);
-
-  margin-bottom: 10px;
 }
 
 .business {
   padding-bottom: 94px;
 }
 
+h2 {
+  margin-bottom: 50px;
+
+  color: var(--text-color);
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  text-decoration: none;
+}
+
 .business-img {
   display: flex;
-  justify-content: space-between;
+}
+
+.business-img .img + .img {
+  margin-left: 30px;
 }
 
 .command {
   background-color: #f5f4fa;
+
   padding-top: 94px;
   padding-bottom: 94px;
 }
 
 .command-list {
   display: flex;
-  justify-content: space-between;
 }
+
+.command-list .command-li + .command-li {
+  margin-left: 30px;
+}
+
 .command-heder {
+  margin-bottom: 10px;
+
+  color: var(--text-color);
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  color: var(--text-color);
-  margin-top: 30px;
-  margin-bottom: 10px;
+}
+
+.command-box {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
 }
 
 .command-text {
@@ -241,31 +278,36 @@ h2 {
 /* Футер */
 
 .footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
   background-color: var(--background-color);
 }
 
-.footer-container {
-  padding-top: 60px;
-  padding-bottom: 60px;
+.logo-accent-footer {
+  color: var(--white-text);
 }
 
 .address {
+  margin-top: 20px;
+
+  color: var(--white-text);
+
   font-style: normal;
   font-size: 14px;
   line-height: 1.7;
   text-decoration: none;
-  color: var(--white-text);
-  margin-top: 20px;
-  margin-bottom: 9px;
 }
 
 .address-contacts a {
   padding-left: 0;
+
+  color: rgba(255, 255, 255, 0.6);
+
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.6);
 }
 
 .address-contacts a:hover,
@@ -279,7 +321,7 @@ h2 {
 
 /* Портфолио*/
 
-.main-portfolio {
+.portfolio-container {
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -290,11 +332,13 @@ h2 {
   margin-bottom: 50px;
 }
 
-.container .list-btn:last-child {
-  margin-right: 8px;
+.container .button + .button {
+  margin-left: 8px;
 }
 
 .list-btn {
+  background: #f5f4fa;
+
   font-family: var(--main-font);
   font-weight: 500;
   font-size: 16px;
@@ -304,7 +348,6 @@ h2 {
   border-radius: 4px;
   padding: 6px 22px;
   text-align: center;
-  background: #f5f4fa;
 }
 
 .list-btn:hover,
@@ -336,18 +379,24 @@ h2 {
   margin-bottom: 0;
 }
 
+.portfolio-box {
+  padding: 20px 24px 20px 24px;
+  border: 1px solid #ececec;
+}
 .portfolio-heder {
+  margin-bottom: 4px;
+
+  color: var(--text-color);
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  color: var(--text-color);
-  margin-top: 20px;
-  margin-bottom: 4px;
 }
 
 .portfolio-text {
+  color: var(--main-color);
+
   font-size: 16px;
   line-height: 1.9;
-  color: var(--main-color);
 }
