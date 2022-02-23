@@ -180,8 +180,18 @@ h1 {
   background-color: #188ce8;
 }
 
-.hidden-header {
-  visibility: hidden;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .features-list {
@@ -381,7 +391,9 @@ h2 {
 
 .portfolio-box {
   padding: 20px 24px 20px 24px;
-  border: 1px solid #ececec;
+  border-right: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  border-left: 1px solid #ececec;
 }
 .portfolio-heder {
   margin-bottom: 4px;
